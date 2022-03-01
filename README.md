@@ -71,12 +71,12 @@ Regular Operation:
 | OPCODE | DESTIN |  | REG A  | REG B  |
 +-----------------+  +-----------------+
 
-Immediate Operation:
+Immediate Arithmetic Operation:
 +-----------------+  +-----------------+
 | OPCODE | DESTIN |  | REG A  |  IMMD  |
 +-----------------+  +-----------------+
 
-Load Operation:
+Move Immediate/Load/Store Operation:
 +-----------------+  +-----------------+
 | OPCODE | DESTIN |  |       SRC       |
 +-----------------+  +-----------------+
@@ -93,6 +93,7 @@ AND  -- and
 ORR  -- inclusive or
 EOR  -- exclusive or
 LSL  -- logical shift left
+MOVI -- move immediate
 LSR  -- logical shift right
 LDR  -- load register
 STR  -- store register
