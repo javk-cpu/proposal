@@ -56,6 +56,55 @@ Register Map:
 ```
 
 
+## Instructions
+
+In an effort to simplify our instruction set architecture, we are
+limiting ourselves to a maximum of 16 opcodes and a fixed instruction
+width of two bytes.  By doing so we can have a good compromise between
+simplifying controller logic and functionality.
+
+Each instruction is divided into a destination byte and a source byte.
+Each byte is then divided into its respective hex nibble.
+
+```
+Regular Operation:
++-----------------+  +-----------------+
+| OPCODE | DESTIN |  | REG A  | REG B  |
++-----------------+  +-----------------+
+
+Immediate Operation:
++-----------------+  +-----------------+
+| OPCODE | DESTIN |  | REG A  |  IMMD  |
++-----------------+  +-----------------+
+
+Load Operation:
++-----------------+  +-----------------+
+| OPCODE | DESTIN |  |       SRC       |
++-----------------+  +-----------------+
+```
+
+In addition to this, we plan to implement the following instructions:
+
+```
+ADD  -- add
+SUB  -- subtract
+ADDI -- add immediate (4-bit value)
+SUBI -- subtract immediate (4-bit value)
+AND  -- and
+ORR  -- inclusive or
+EOR  -- exclusive or
+LSL  -- logical shift left
+LSR  -- logical shift right
+LDR  -- load register
+STR  -- store register
+JMP  -- conditional jump based on register A
+NOP  -- no operation
+```
+
+Since our instruction set is rather small, we also plan to add mnemonics
+to simplify the job of the programmer while writing assembly.
+
+
 ## Copyright & Licensing
 
 Copyright (C) 2022  Jacob Koziej [`<jacobkoziej@gmail.com>`]
