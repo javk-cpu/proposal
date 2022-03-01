@@ -28,7 +28,6 @@ The `PC` is the program counter.
 The `ZR` is both an 8-bit and 16-bit register depending on the use case.
 Its value is always set to the constant `0`.
 
-
 ```
 Register Map:
 
