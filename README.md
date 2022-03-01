@@ -102,7 +102,8 @@ NOP  -- no operation
 ```
 
 Since our instruction set is rather small, we also plan to add mnemonics
-to simplify the job of the programmer while writing assembly.
+to simplify the job of the programmer while writing assembly. For
+example, `mov b, a  ==>  orr b, zr, a`.
 
 
 ## Copyright & Licensing
